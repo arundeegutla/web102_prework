@@ -211,7 +211,7 @@ searchElement.addEventListener('input', searchFunction);
 
 function searchFunction(e){
     let filteredGames = GAMES_JSON.filter ( (game) => {
-        return game.name.toLowerCase().indexOf(e.target.value) == 0;
+        return game.name.toLowerCase().indexOf(e.target.value.toLowerCase()) == 0;
     });
     deleteChildElements(gamesContainer);
     addGamesToPage(gamesContainer, filteredGames);
